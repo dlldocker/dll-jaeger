@@ -41,15 +41,15 @@ services:
       - dll-els:dll-els
     networks:
       - els-net
-  hotrod:
-    image: jaegertracing/example-hotrod:1.6
-    command: all --jaeger-agent.host-port=agent:6831
-    ports:
-       - 18080:8080
-    depends_on:
-       - agent
-    networks:
-       - els-net
+  # hotrod:
+  #   image: jaegertracing/example-hotrod:1.6
+  #   command: all --jaeger-agent.host-port=agent:6831
+  #   ports:
+  #      - 18080:8080
+  #   depends_on:
+  #      - agent
+  #   networks:
+  #      - els-net
 networks:
   els-net:
     external: true 
